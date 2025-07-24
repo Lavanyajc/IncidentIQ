@@ -1,0 +1,8 @@
+INSERT INTO mei."categorias" (
+	"nome_categoria",
+	"descricao",
+	"ativo")
+VALUES (
+	'{{insert_form.formData.nome_categoria}}',
+	'{{insert_form.formData.descricao}}',
+	'{{insert_form.formData.ativo}}');

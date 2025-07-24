@@ -1,0 +1,5 @@
+UPDATE mei."categorias" SET
+		"nome_categoria" = '{{update_form.fieldState.nome_categoria.isVisible ? update_form.formData.nome_categoria : update_form.sourceData.nome_categoria}}',
+		"descricao" = '{{update_form.fieldState.descricao.isVisible ? update_form.formData.descricao : update_form.sourceData.descricao}}',
+    "ativo" = '{{update_form.fieldState.ativo.isVisible ? update_form.formData.ativo : update_form.sourceData.ativo}}'
+WHERE "id_categoria" = {{data_table.selectedRow.id_categoria}};

@@ -1,0 +1,434 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowAddNewRow": true,
+  "animateLoading": true,
+  "borderColor": "#E0DEDE",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "1",
+  "bottomRow": 51,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "cachedTableData": {},
+  "canFreezeColumn": true,
+  "childStylesheet": {
+    "button": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "editActions": {
+      "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "iconButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "menuButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "menuColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "columnOrder": [
+    "id",
+    "service",
+    "timestamp",
+    "status",
+    "severity",
+    "EditActions1"
+  ],
+  "columnUpdatedAt": 1753341991781,
+  "columnWidthMap": {},
+  "customIsLoading": false,
+  "customIsLoadingValue": "",
+  "defaultPageSize": 0,
+  "defaultSearchText": "",
+  "defaultSelectedRowIndex": "",
+  "defaultSelectedRowIndices": [
+    0
+  ],
+  "delimiter": ",",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "totalRecordsCount"
+    },
+    {
+      "key": "primaryColumns.id.computedValue"
+    },
+    {
+      "key": "primaryColumns.service.computedValue"
+    },
+    {
+      "key": "primaryColumns.severity.computedValue"
+    },
+    {
+      "key": "primaryColumns.timestamp.computedValue"
+    },
+    {
+      "key": "primaryColumns.status.computedValue"
+    },
+    {
+      "key": "primaryColumns.severity.buttonLabel"
+    },
+    {
+      "key": "primaryColumns.status.textColor"
+    },
+    {
+      "key": "primaryColumns.status.buttonLabel"
+    },
+    {
+      "key": "primaryColumns.id.textColor"
+    },
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.service.textColor"
+    },
+    {
+      "key": "primaryColumns.status.buttonColor"
+    },
+    {
+      "key": "primaryColumns.EditActions1.saveButtonColor"
+    },
+    {
+      "key": "primaryColumns.EditActions1.saveBorderRadius"
+    },
+    {
+      "key": "primaryColumns.EditActions1.discardBorderRadius"
+    },
+    {
+      "key": "primaryColumns.EditActions1.isSaveDisabled"
+    },
+    {
+      "key": "primaryColumns.EditActions1.isDiscardDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.severity.onClick"
+    },
+    {
+      "key": "primaryColumns.EditActions1.isSaveDisabled"
+    },
+    {
+      "key": "primaryColumns.EditActions1.isDiscardDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onPageChange"
+    },
+    {
+      "key": "onSearchTextChanged"
+    },
+    {
+      "key": "onSort"
+    },
+    {
+      "key": "onAddNewRowSave"
+    },
+    {
+      "key": "primaryColumns.severity.onClick"
+    },
+    {
+      "key": "primaryColumns.severity.onCheckChange"
+    }
+  ],
+  "enableClientSideSearch": false,
+  "endOfData": false,
+  "flexVerticalAlignment": "start",
+  "horizontalAlignment": "LEFT",
+  "inlineEditingSaveOption": "ROW_LEVEL",
+  "isLoading": false,
+  "isSortable": true,
+  "isVisible": true,
+  "isVisibleDownload": false,
+  "isVisibleFilters": false,
+  "isVisiblePagination": true,
+  "isVisibleSearch": true,
+  "key": "m2i9xdnqhx",
+  "label": "Data",
+  "leftColumn": 7,
+  "minWidth": 450,
+  "mobileBottomRow": 44,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 34,
+  "mobileTopRow": 16,
+  "needsErrorInfo": false,
+  "onAddNewRowSave": "{{JSObject2.Table1onAddNewRowSave();}}",
+  "onPageChange": "{{\n            Select_mei_categorias1.run();\n            Total_record_mei_categorias1.run()\n          }}",
+  "onSearchTextChanged": "{{\n            Select_mei_categorias1.run();\n            Total_record_mei_categorias1.run()\n          }}",
+  "onSort": "{{\n            Select_mei_categorias1.run();\n            Total_record_mei_categorias1.run()\n          }}",
+  "parentColumnSpace": 17.9375,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "primaryColumnId": "id_categoria",
+  "primaryColumns": {
+    "EditActions1": {
+      "alias": "EditActions1",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "buttonStyle": "rgb(3, 179, 101)",
+      "columnType": "editActions",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "discardActionLabel": "Discard",
+      "discardBorderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "discardButtonColor": "#F22B2B",
+      "discardButtonVariant": "TERTIARY",
+      "discardIconAlign": "left",
+      "enableFilter": true,
+      "enableSort": true,
+      "id": "EditActions1",
+      "index": 5,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardDisabled": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( !Table1.updatedRowIndices.includes(currentIndex)))}}",
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveDisabled": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( !Table1.updatedRowIndices.includes(currentIndex)))}}",
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Save / Discard",
+      "notation": "standard",
+      "originalId": "EditActions1",
+      "saveActionLabel": "Save",
+      "saveBorderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "saveButtonColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "saveIconAlign": "left",
+      "sticky": "right",
+      "thousandSeparator": true,
+      "validation": {},
+      "width": 150
+    },
+    "id": {
+      "alias": "id",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "#dcfce7",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"id\"])) : id })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "CENTER",
+      "id": "id",
+      "index": 0,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "id",
+      "notation": "standard",
+      "originalId": "id",
+      "sticky": "",
+      "textColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "service": {
+      "alias": "service",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "#dcfce7",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"service\"])) : service })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "service",
+      "index": 1,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "service",
+      "notation": "standard",
+      "originalId": "service",
+      "sticky": "",
+      "textColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "severity": {
+      "alias": "severity",
+      "allowCellWrapping": true,
+      "allowSameOptionsInNewRow": true,
+      "buttonLabel": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( \n  currentRow.severity === \"Critical\" ? \"red\" :\n  currentRow.severity === \"High\" ? \"orange\" :\n  currentRow.severity === \"Medium\" ? \"gold\" :\n  \"green\"\n)) :  \n  currentRow.severity === \"Critical\" ? \"red\" :\n  currentRow.severity === \"High\" ? \"orange\" :\n  currentRow.severity === \"Medium\" ? \"gold\" :\n  \"green\"\n })()}}",
+      "cellBackground": "#dcfce7",
+      "columnType": "checkbox",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( \n  currentRow.severity === \"Critical\" ? \"red\" :\n  currentRow.severity === \"High\" ? \"orange\" :\n  currentRow.severity === \"Medium\" ? \"gold\" :\n  \"green\"\n)) :  \n  currentRow.severity === \"Critical\" ? \"red\" :\n  currentRow.severity === \"High\" ? \"orange\" :\n  currentRow.severity === \"Medium\" ? \"gold\" :\n  \"green\"\n })()}}",
+      "configureMenuItems": {
+        "config": {
+          "id": "config",
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Menu Item"
+        },
+        "id": "config",
+        "label": "Configure menu items"
+      },
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "CENTER",
+      "id": "severity",
+      "index": 2,
+      "isCellEditable": true,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": true,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "severity",
+      "menuItemsSource": "DYNAMIC",
+      "notation": "standard",
+      "onCheckChange": "{{storeValue(\"\", \"\")}}",
+      "onClick": "\n\n",
+      "originalId": "severity",
+      "sourceData": "",
+      "sticky": "right",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {
+        "isColumnEditableCellRequired": true
+      },
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "status": {
+      "alias": "status",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "borderRadius": "0px",
+      "boxShadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+      "buttonColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "buttonLabel": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\n  currentRow.status === \"Unresolved\" ? \"red\" :\n  currentRow.status === \"Acknowledged\" ? \"blue\" :\n  \"green\"\n)) : \n  currentRow.status === \"Unresolved\" ? \"red\" :\n  currentRow.status === \"Acknowledged\" ? \"blue\" :\n  \"green\"\n })()}}",
+      "buttonVariant": "SECONDARY",
+      "cellBackground": "#dcfce7",
+      "columnType": "iconButton",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\n  currentRow.status === \"Unresolved\" ? \"red\" :\n  currentRow.status === \"Acknowledged\" ? \"blue\" :\n  \"green\"\n)) : \n  currentRow.status === \"Unresolved\" ? \"red\" :\n  currentRow.status === \"Acknowledged\" ? \"blue\" :\n  \"green\"\n })()}}",
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "status",
+      "index": 4,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "status",
+      "menuItemsSource": "STATIC",
+      "notation": "standard",
+      "originalId": "status",
+      "sticky": "",
+      "textColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "timestamp": {
+      "alias": "timestamp",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "#dcfce7",
+      "columnType": "date",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"timestamp\"])) : timestamp })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "CENTER",
+      "id": "timestamp",
+      "index": 3,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "timestamp",
+      "notation": "standard",
+      "originalId": "timestamp",
+      "sticky": "",
+      "textColor": "#7e22ce",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    }
+  },
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 57,
+  "searchKey": "",
+  "serverSidePaginationEnabled": true,
+  "showInlineEditingOptionDropdown": true,
+  "tableData": "{{\n[\n  {\n    \"id\": \"A1001\",\n    \"service\": \"Auth Service\",\n    \"severity\": \"High\",\n    \"timestamp\": \"2025-07-23 13:30\",\n    \"status\": \"Unresolved\"\n  },\n  {\n    \"id\": \"A1002\",\n    \"service\": \"Payment Gateway\",\n    \"severity\": \"Medium\",\n    \"timestamp\": \"2025-07-23 12:15\",\n    \"status\": \"Acknowledged\"\n  },\n  {\n    \"id\": \"A1003\",\n    \"service\": \"User Management\",\n    \"severity\": \"Critical\",\n    \"timestamp\": \"2025-07-23 11:00\",\n    \"status\": \"Unresolved\"\n  },\n  {\n    \"id\": \"A1004\",\n    \"service\": \"Notification Service\",\n    \"severity\": \"Low\",\n    \"timestamp\": \"2025-07-22 20:45\",\n    \"status\": \"Resolved\"\n  },\n  {\n    \"id\": \"A1005\",\n    \"service\": \"Database Cluster\",\n    \"severity\": \"High\",\n    \"timestamp\": \"2025-07-22 18:30\",\n    \"status\": \"Unresolved\"\n  },\n  {\n    \"id\": \"A1006\",\n    \"service\": \"API Gateway\",\n    \"severity\": \"Medium\",\n    \"timestamp\": \"2025-07-22 16:00\",\n    \"status\": \"Acknowledged\"\n  },\n  {\n    \"id\": \"A1007\",\n    \"service\": \"Logging Service\",\n    \"severity\": \"Low\",\n    \"timestamp\": \"2025-07-22 15:10\",\n    \"status\": \"Resolved\"\n  },\n  {\n    \"id\": \"A1008\",\n    \"service\": \"Analytics Engine\",\n    \"severity\": \"Critical\",\n    \"timestamp\": \"2025-07-22 14:50\",\n    \"status\": \"Unresolved\"\n  }\n]\n}}\n",
+  "textSize": "0.875rem",
+  "topRow": 11,
+  "totalRecordsCount": "{{Total_record_mei_categorias1.data[0].count}}",
+  "type": "TABLE_WIDGET_V2",
+  "version": 2,
+  "verticalAlignment": "CENTER",
+  "widgetId": "6zsyd8meje",
+  "widgetName": "Table1"
+}

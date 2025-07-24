@@ -1,0 +1,2 @@
+DELETE FROM mei."categorias"
+  WHERE "id_categoria" = {{data_table.triggeredRow.id_categoria}};

@@ -1,0 +1,1 @@
+UPDATE mei.categorias SET "nome_categoria"= '{{Table1.updatedRow.nome_categoria}}', "descricao"= '{{Table1.updatedRow.descricao}}', "ativo"= '{{Table1.updatedRow.ativo}}' WHERE "id_categoria"= {{Table1.updatedRow.id_categoria}};

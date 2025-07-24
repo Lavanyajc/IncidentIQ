@@ -1,0 +1,1 @@
+INSERT INTO mei.categorias ("nome_categoria","descricao","ativo") VALUES ('{{(Table1.newRow || {}).nome_categoria}}','{{(Table1.newRow || {}).descricao}}','{{(Table1.newRow || {}).ativo}}')

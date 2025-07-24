@@ -1,0 +1,1 @@
+SELECT COUNT(*) from mei.categorias where descricao ilike '%{{Table1.searchText}}%';
