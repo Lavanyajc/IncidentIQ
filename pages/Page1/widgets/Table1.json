@@ -92,9 +92,6 @@
       "key": "primaryColumns.id.textColor"
     },
     {
-      "key": "tableData"
-    },
-    {
       "key": "primaryColumns.service.textColor"
     },
     {
@@ -114,6 +111,9 @@
     },
     {
       "key": "primaryColumns.EditActions1.isDiscardDisabled"
+    },
+    {
+      "key": "tableData"
     }
   ],
   "dynamicPropertyPathList": [
@@ -422,7 +422,7 @@
   "searchKey": "",
   "serverSidePaginationEnabled": true,
   "showInlineEditingOptionDropdown": true,
-  "tableData": "{{\n[\n  {\n    \"id\": \"A1001\",\n    \"service\": \"Auth Service\",\n    \"severity\": \"High\",\n    \"timestamp\": \"2025-07-23 13:30\",\n    \"status\": \"Unresolved\"\n  },\n  {\n    \"id\": \"A1002\",\n    \"service\": \"Payment Gateway\",\n    \"severity\": \"Medium\",\n    \"timestamp\": \"2025-07-23 12:15\",\n    \"status\": \"Acknowledged\"\n  },\n  {\n    \"id\": \"A1003\",\n    \"service\": \"User Management\",\n    \"severity\": \"Critical\",\n    \"timestamp\": \"2025-07-23 11:00\",\n    \"status\": \"Unresolved\"\n  },\n  {\n    \"id\": \"A1004\",\n    \"service\": \"Notification Service\",\n    \"severity\": \"Low\",\n    \"timestamp\": \"2025-07-22 20:45\",\n    \"status\": \"Resolved\"\n  },\n  {\n    \"id\": \"A1005\",\n    \"service\": \"Database Cluster\",\n    \"severity\": \"High\",\n    \"timestamp\": \"2025-07-22 18:30\",\n    \"status\": \"Unresolved\"\n  },\n  {\n    \"id\": \"A1006\",\n    \"service\": \"API Gateway\",\n    \"severity\": \"Medium\",\n    \"timestamp\": \"2025-07-22 16:00\",\n    \"status\": \"Acknowledged\"\n  },\n  {\n    \"id\": \"A1007\",\n    \"service\": \"Logging Service\",\n    \"severity\": \"Low\",\n    \"timestamp\": \"2025-07-22 15:10\",\n    \"status\": \"Resolved\"\n  },\n  {\n    \"id\": \"A1008\",\n    \"service\": \"Analytics Engine\",\n    \"severity\": \"Critical\",\n    \"timestamp\": \"2025-07-22 14:50\",\n    \"status\": \"Unresolved\"\n  }\n]\n}}\n",
+  "tableData": "{{AlertData.getAlerts()}}\n",
   "textSize": "0.875rem",
   "topRow": 11,
   "totalRecordsCount": "{{Total_record_mei_categorias1.data[0].count}}",

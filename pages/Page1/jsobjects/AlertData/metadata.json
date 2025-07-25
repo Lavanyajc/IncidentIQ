@@ -1,8 +1,8 @@
 {
-  "gitSyncId": "6881b4f0981ebf2136615faf_d2c912b2-06e0-4abc-ae76-0f890b1071fa",
-  "id": "Page1_JSObject1",
+  "gitSyncId": "6881b4f0981ebf2136615faf_a553d8fc-04ed-4c5f-8d8b-694e322a4d3d",
+  "id": "Page1_AlertData",
   "unpublishedCollection": {
-    "name": "JSObject1",
+    "name": "AlertData",
     "pageId": "Page1",
     "pluginId": "js-plugin",
     "pluginType": "JS",
