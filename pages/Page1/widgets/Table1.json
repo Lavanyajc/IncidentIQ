@@ -1,11 +1,11 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-  "allowAddNewRow": true,
+  "allowAddNewRow": false,
   "animateLoading": true,
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 51,
+  "bottomRow": 57,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -107,13 +107,10 @@
       "key": "primaryColumns.EditActions1.discardBorderRadius"
     },
     {
-      "key": "primaryColumns.EditActions1.isSaveDisabled"
-    },
-    {
-      "key": "primaryColumns.EditActions1.isDiscardDisabled"
-    },
-    {
       "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.severity.cellBackground"
     }
   ],
   "dynamicPropertyPathList": [
@@ -124,10 +121,13 @@
       "key": "primaryColumns.severity.onClick"
     },
     {
-      "key": "primaryColumns.EditActions1.isSaveDisabled"
+      "key": "primaryColumns.severity.cellBackground"
     },
     {
-      "key": "primaryColumns.EditActions1.isDiscardDisabled"
+      "key": "primaryColumns.EditActions1.onSave"
+    },
+    {
+      "key": "primaryColumns.EditActions1.isCellVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -148,23 +148,29 @@
     },
     {
       "key": "primaryColumns.severity.onCheckChange"
+    },
+    {
+      "key": "primaryColumns.EditActions1.onSave"
+    },
+    {
+      "key": "primaryColumns.EditActions1.onDiscard"
     }
   ],
-  "enableClientSideSearch": false,
+  "enableClientSideSearch": true,
   "endOfData": false,
   "flexVerticalAlignment": "start",
   "horizontalAlignment": "LEFT",
   "inlineEditingSaveOption": "ROW_LEVEL",
   "isLoading": false,
-  "isSortable": true,
+  "isSortable": false,
   "isVisible": true,
   "isVisibleDownload": false,
-  "isVisibleFilters": false,
+  "isVisibleFilters": true,
   "isVisiblePagination": true,
-  "isVisibleSearch": true,
+  "isVisibleSearch": false,
   "key": "m2i9xdnqhx",
   "label": "Data",
-  "leftColumn": 7,
+  "leftColumn": 3,
   "minWidth": 450,
   "mobileBottomRow": 44,
   "mobileLeftColumn": 0,
@@ -173,7 +179,7 @@
   "needsErrorInfo": false,
   "onAddNewRowSave": "{{JSObject2.Table1onAddNewRowSave();}}",
   "onPageChange": "{{\n            Select_mei_categorias1.run();\n            Total_record_mei_categorias1.run()\n          }}",
-  "onSearchTextChanged": "{{\n            Select_mei_categorias1.run();\n            Total_record_mei_categorias1.run()\n          }}",
+  "onSearchTextChanged": "{{Select_mei_categorias1.run().then(() => {\n  storeValue(\"\", \"\");\n});\nTotal_record_mei_categorias1.run();\ncloseModal('');}}",
   "onSort": "{{\n            Select_mei_categorias1.run();\n            Total_record_mei_categorias1.run()\n          }}",
   "parentColumnSpace": 17.9375,
   "parentId": "0",
@@ -189,7 +195,7 @@
       "computedValue": "",
       "currencyCode": "USD",
       "decimals": 0,
-      "discardActionLabel": "Discard",
+      "discardActionLabel": "",
       "discardBorderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
       "discardButtonColor": "#F22B2B",
       "discardButtonVariant": "TERTIARY",
@@ -199,17 +205,18 @@
       "id": "EditActions1",
       "index": 5,
       "isCellEditable": false,
-      "isCellVisible": true,
+      "isCellVisible": "true",
       "isDerived": true,
       "isDisabled": false,
-      "isDiscardDisabled": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( !Table1.updatedRowIndices.includes(currentIndex)))}}",
-      "isDiscardVisible": true,
+      "isDiscardDisabled": false,
       "isEditable": false,
-      "isSaveDisabled": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( !Table1.updatedRowIndices.includes(currentIndex)))}}",
+      "isSaveDisabled": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "Save / Discard",
+      "label": "Save",
       "notation": "standard",
+      "onDiscard": "",
+      "onSave": "{{ showAlert(\"✅ Acknowledged alert ID: \" + Table1.selectedRow.id, \"success\") }}\n\n",
       "originalId": "EditActions1",
       "saveActionLabel": "Save",
       "saveBorderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
@@ -269,12 +276,12 @@
       "horizontalAlignment": "LEFT",
       "id": "service",
       "index": 1,
-      "isCellEditable": false,
+      "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": false,
+      "isEditable": true,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "service",
@@ -293,7 +300,7 @@
       "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "buttonLabel": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( \n  currentRow.severity === \"Critical\" ? \"red\" :\n  currentRow.severity === \"High\" ? \"orange\" :\n  currentRow.severity === \"Medium\" ? \"gold\" :\n  \"green\"\n)) :  \n  currentRow.severity === \"Critical\" ? \"red\" :\n  currentRow.severity === \"High\" ? \"orange\" :\n  currentRow.severity === \"Medium\" ? \"gold\" :\n  \"green\"\n })()}}",
-      "cellBackground": "#dcfce7",
+      "cellBackground": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( \n  currentRow.severity === \"High\" ? \"#ffcccc\" : \n  currentRow.severity === \"Medium\" ? \"#fff3cd\" : \n  \"#d4edda\" \n)) :  \n  currentRow.severity === \"High\" ? \"#ffcccc\" : \n  currentRow.severity === \"Medium\" ? \"#fff3cd\" : \n  \"#d4edda\" \n })()}}",
       "columnType": "checkbox",
       "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( \n  currentRow.severity === \"Critical\" ? \"red\" :\n  currentRow.severity === \"High\" ? \"orange\" :\n  currentRow.severity === \"Medium\" ? \"gold\" :\n  \"green\"\n)) :  \n  currentRow.severity === \"Critical\" ? \"red\" :\n  currentRow.severity === \"High\" ? \"orange\" :\n  currentRow.severity === \"Medium\" ? \"gold\" :\n  \"green\"\n })()}}",
       "configureMenuItems": {
@@ -387,7 +394,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "#dcfce7",
       "columnType": "date",
-      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"timestamp\"])) : timestamp })()}}",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (moment(currentRow.timestamp).format(\"YYYY-MM-DD HH:mm:ss\"))) : moment(currentRow.timestamp).format(\"YYYY-MM-DD HH:mm:ss\") })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -418,13 +425,13 @@
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 57,
+  "rightColumn": 53,
   "searchKey": "",
   "serverSidePaginationEnabled": true,
   "showInlineEditingOptionDropdown": true,
-  "tableData": "{{AlertData.getAlerts()}}\n",
+  "tableData": "{{ \n  AlertData.getAlerts().filter(alert => \n    Input1.text === \"\" || \n    alert.service?.toLowerCase().includes(Input1.text.toLowerCase())\n  ) \n}}\n",
   "textSize": "0.875rem",
-  "topRow": 11,
+  "topRow": 17,
   "totalRecordsCount": "{{Total_record_mei_categorias1.data[0].count}}",
   "type": "TABLE_WIDGET_V2",
   "version": 2,
